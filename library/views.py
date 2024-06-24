@@ -7,6 +7,10 @@ def index(request):
   name = "tantan"
   return render(request, 'library_index.html', {'name': name, 'books': books})
 
+def book_detail(request, id):
+  book = Book.objects.get(pk=id)
+  return render(request, 'library_detail.html', { 'book': book })
+
 def create(request):
   return render(request, 'library_create_book.html')
 
