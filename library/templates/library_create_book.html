@@ -1,11 +1,20 @@
 {% extends 'base.html' %}
-
 {% block title %}
-  Create a Book - Library
+    Create a book - Library
 {% endblock %}
-
 {% block content %}
-  <h1>Create a Book</h1>
-
-  <!-- Write the form here! -->
+    <h1>Create a book</h1>
+<form action="/action_page.php">
+  <label for="title">Title:</label><br>
+  <input type="text" id="title" name="title"><br><br>
+  <label for="author">Author:</label><br>
+  <input type="text" id="author" name="author"><br><br>
+  <label for="genre">Genre:</label><br>
+  <input type="text" id="genre" name="genre"><br><br>
+  <label for="pages">Pages:</label><br>
+  <input type="number" id="pages" name="pages"><br><br>
+  <label for="hardbound">Is Hardbound?</label>
+  <input type="checkbox" id="hardbound" name="hardbound">
+  <input type="submit" value="Submit">
+</form> 
 {% endblock %}
